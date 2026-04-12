@@ -239,36 +239,47 @@ p {
 .sticker {
     position: absolute;
     z-index: 5;
+    pointer-events: none;
 }
 
-.sticker-star-1 {
+.sticker-star-huge-tr {
+    top: -25%;
+    right: -15%;
+    width: clamp(300px, 40vw, 600px);
+    z-index: 1; /* Detrás del texto */
+}
+
+.sticker-star-huge-bl {
+    bottom: -25%;
+    left: -15%;
+    width: clamp(300px, 40vw, 600px);
+    z-index: 1;
+}
+
+.sticker-star-tl {
     top: 10%;
-    left: 15%;
-    width: 60px;
+    left: 8%;
+    width: clamp(40px, 5vw, 80px);
 }
 
-.sticker-star-2 {
-    top: 5%;
-    right: 10%;
-    width: 180px;
+.sticker-star-br {
+    bottom: 10%;
+    right: 8%;
+    width: clamp(40px, 5vw, 80px);
 }
 
-.sticker-star-3 {
-    bottom: 5%;
-    left: 10%;
-    width: 200px;
+.sticker-avatar-left {
+    top: 50%;
+    left: 14%;
+    transform: translateY(-50%);
+    width: clamp(80px, 10vw, 150px);
+    z-index: 15;
 }
 
-.sticker-star-4 {
-    bottom: 15%;
-    right: 20%;
-    width: 80px;
-}
-
-.sticker-avatar {
-    top: 35%;
-    right: 25%;
-    width: 100px;
+.sticker-avatar-right {
+    top: 30%;
+    right: 18%;
+    width: clamp(70px, 9vw, 120px);
     z-index: 15;
 }
 
@@ -339,12 +350,21 @@ p {
 
 /* About Section */
 .new-about {
+    position: relative;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 4rem;
+    overflow: hidden;
+}
+
+.new-about::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-image: url('assets/fondo2.png');
     background-size: cover;
     background-position: center;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    position: relative;
-    padding-top: 4rem;
+    transform: rotate(180deg);
+    z-index: -1;
 }
 
 .section-title-about {
