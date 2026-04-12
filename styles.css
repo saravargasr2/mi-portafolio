@@ -174,14 +174,14 @@ p {
     background-image: url('assets/fondo 1 hero.png');
     background-size: cover;
     background-position: center;
-    /* overflow: hidden removed to allow stars to transition to next section */
+    overflow: hidden;
 }
 
 .hero-composition {
     position: relative;
     width: 100%;
-    max-width: 1200px;
-    height: 600px;
+    max-width: 1400px;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -361,7 +361,7 @@ p {
 .new-about {
     position: relative;
     padding-top: 4rem;
-    /* Removed overflow: hidden to prevent cutting corner stars */
+    overflow: hidden;
 }
 
 .new-about::before {
