@@ -510,8 +510,9 @@ p {
 /* Frameless Photo */
 .profile-no-frame-wrapper {
     position: relative;
-    width: 250px;
+    width: 300px; /* Larger photo */
     margin: 0 auto;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
 }
 
 .photo-only {
@@ -519,13 +520,14 @@ p {
     height: auto;
     object-fit: cover;
     display: block;
+    border-radius: 10px; /* Slight softening */
 }
 
 .sticker-cat-new {
     position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 80px;
+    top: -15px;
+    right: -15px;
+    width: 90px;
     z-index: 10;
 }
 
