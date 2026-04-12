@@ -360,9 +360,8 @@ p {
 /* About Section */
 .new-about {
     position: relative;
-    border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 4rem;
-    overflow: hidden;
+    /* Removed overflow: hidden to prevent cutting corner stars */
 }
 
 .new-about::before {
@@ -399,6 +398,10 @@ p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.cv-col-1 {
+    justify-content: space-between;
 }
 
 .cv-section h3 {
@@ -444,10 +447,24 @@ p {
     margin-bottom: 0.6rem;
 }
 
-/* Software Icons */
-.software-section p {
-    font-size: 0.85rem;
-    line-height: 1.6;
+/* Software Icons Grid */
+.software-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.software-grid img {
+    width: 35px;
+    height: 35px;
+    object-fit: contain;
+    filter: drop-shadow(0 0 5px rgba(255, 255, 255, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.software-grid img:hover {
+    transform: scale(1.2);
 }
 
 /* Polaroid Photo */
