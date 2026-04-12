@@ -174,7 +174,7 @@ p {
     background-image: url('assets/fondo 1 hero.png');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
+    /* overflow: hidden removed to allow stars to transition to next section */
 }
 
 .hero-composition {
@@ -262,19 +262,19 @@ p {
 .sticker-sparkle-tl {
     top: 5%;
     left: 5%;
-    width: clamp(50px, 6vw, 100px);
+    width: clamp(40px, 5vw, 80px);
 }
 
 .sticker-sparkle-br-1 {
     bottom: 15%;
     right: 8%;
-    width: clamp(60px, 7vw, 110px);
+    width: clamp(50px, 6vw, 90px);
 }
 
 .sticker-sparkle-br-2 {
     bottom: 5%;
     right: 5%;
-    width: clamp(30px, 4vw, 60px);
+    width: clamp(25px, 3.5vw, 50px);
 }
 
 .sticker-avatar-left {
