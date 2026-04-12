@@ -243,29 +243,38 @@ p {
 }
 
 .sticker-star-huge-tr {
-    top: -25%;
-    right: -15%;
-    width: clamp(300px, 40vw, 600px);
+    top: -20%;
+    right: -25%;
+    width: clamp(350px, 45vw, 650px);
     z-index: 1; /* Detrás del texto */
+    transform-origin: center;
 }
 
 .sticker-star-huge-bl {
-    bottom: -25%;
-    left: -15%;
-    width: clamp(300px, 40vw, 600px);
+    bottom: -20%;
+    left: -25%;
+    width: clamp(350px, 45vw, 650px);
     z-index: 1;
+    transform-origin: center;
 }
 
-.sticker-star-tl {
-    top: 10%;
-    left: 8%;
-    width: clamp(40px, 5vw, 80px);
+/* Destellos Negros (Sparkles) */
+.sticker-sparkle-tl {
+    top: 5%;
+    left: 5%;
+    width: clamp(50px, 6vw, 100px);
 }
 
-.sticker-star-br {
-    bottom: 10%;
+.sticker-sparkle-br-1 {
+    bottom: 15%;
     right: 8%;
-    width: clamp(40px, 5vw, 80px);
+    width: clamp(60px, 7vw, 110px);
+}
+
+.sticker-sparkle-br-2 {
+    bottom: 5%;
+    right: 5%;
+    width: clamp(30px, 4vw, 60px);
 }
 
 .sticker-avatar-left {
