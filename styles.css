@@ -431,6 +431,19 @@ p {
     margin-bottom: 0px;
 }
 
+/* Compression for Education/Experience column to match height */
+.cv-col-3 {
+    gap: 1rem !important;
+}
+
+.cv-col-3 .cv-item {
+    margin-bottom: 0.8rem;
+}
+
+.cv-col-3 .cv-section h3 {
+    margin-bottom: 0.6rem;
+}
+
 /* Software Icons */
 .software-section p {
     font-size: 0.85rem;
@@ -477,9 +490,9 @@ p {
 
 .sticker-cat {
     position: absolute;
-    top: -30px;
-    right: -40px;
-    width: 120px;
+    top: -20px;
+    right: -30px;
+    width: 100px;
     z-index: 20;
 }
 
