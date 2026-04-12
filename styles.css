@@ -1,8 +1,8 @@
 :root {
     --bg-dark: #121212;
     --bg-darker: #0a0a0a;
-    --fuchsia: #ff00ff;
-    --fuchsia-dim: rgba(255, 0, 255, 0.2);
+    --fuchsia: #E63B7A;
+    --fuchsia-dim: rgba(230, 59, 122, 0.2);
     --text-white: #ffffff;
     --text-muted: #a0a0a0;
     --font-main: 'Montserrat', sans-serif;
@@ -172,7 +172,9 @@ p {
     justify-content: center;
     align-items: center;
     position: relative;
-    background-color: #121214;
+    background-image: url('assets/fondo 1 hero.png');
+    background-size: cover;
+    background-position: center;
     overflow: hidden;
 }
 
@@ -306,7 +308,9 @@ p {
 
 /* About Section */
 .new-about {
-    background-color: #121214;
+    background-image: url('assets/fondo2.png');
+    background-size: cover;
+    background-position: center;
     border-top: 1px solid rgba(255,255,255,0.1);
     position: relative;
     padding-top: 4rem;
