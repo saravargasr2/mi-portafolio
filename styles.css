@@ -174,7 +174,6 @@ p {
     background-image: url('assets/fondo 1 hero.png');
     background-size: cover;
     background-position: center;
-    overflow: hidden;
 }
 
 .hero-composition {
@@ -243,16 +242,16 @@ p {
 }
 
 .sticker-star-huge-tr {
-    top: -55%;
-    right: -45%;
+    top: -30%;
+    right: -30%;
     width: clamp(350px, 45vw, 650px);
     z-index: 1; /* Detrás del texto */
     transform-origin: center;
 }
 
 .sticker-star-huge-bl {
-    bottom: -55%;
-    left: -45%;
+    bottom: -30%;
+    left: -30%;
     width: clamp(350px, 45vw, 650px);
     z-index: 1;
     transform-origin: center;
@@ -361,7 +360,6 @@ p {
 .new-about {
     position: relative;
     padding-top: 4rem;
-    overflow: hidden;
 }
 
 .new-about::before {
@@ -465,6 +463,17 @@ p {
 
 .software-grid img:hover {
     transform: scale(1.2);
+}
+
+.sections-wrapper {
+    overflow: hidden;
+}
+
+.software-icons-img {
+    width: 100%;
+    max-width: 400px;
+    filter: grayscale(1) brightness(2) contrast(0.5); /* Light gray look */
+    opacity: 0.8;
 }
 
 /* Polaroid Photo */
