@@ -476,6 +476,14 @@ p {
     opacity: 0.8;
 }
 
+.software-icons-img-footer {
+    width: 100%;
+    max-width: 350px; /* Reduced as requested */
+    filter: grayscale(1) brightness(1.8) contrast(0.5);
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
 /* Polaroid Photo */
 .cv-photo-col {
     align-items: center;
@@ -497,6 +505,28 @@ p {
     padding: 10px 10px 40px 10px;
     box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
     width: 250px;
+}
+
+/* Frameless Photo */
+.profile-no-frame-wrapper {
+    position: relative;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.photo-only {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+}
+
+.sticker-cat-new {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 80px;
+    z-index: 10;
 }
 
 .polaroid-img img {
