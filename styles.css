@@ -244,16 +244,16 @@ p {
 }
 
 .sticker-star-huge-tr {
-    top: -30%;
-    right: -30%;
+    top: -55%;
+    right: -45%;
     width: clamp(350px, 45vw, 650px);
     z-index: 1; /* Detrás del texto */
     transform-origin: center;
 }
 
 .sticker-star-huge-bl {
-    bottom: -30%;
-    left: -35%;
+    bottom: -55%;
+    left: -45%;
     width: clamp(350px, 45vw, 650px);
     z-index: 1;
     transform-origin: center;
