@@ -1,0 +1,139 @@
+================================================================================
+BACKUP - PORTAFOLIO SARA VARGAS - ESPECIFICACIONES COMPLETAS
+Fecha: 13 de abril de 2026
+================================================================================
+
+ARCHIVOS PRINCIPALES:
+- index.html
+- styles.css
+- script.js
+
+================================================================================
+INDEX.HTML - ESTRUCTURA Y DETALLES IMPORTANTES
+================================================================================
+
+HEAD:
+- Google Fonts con preconnect
+- Preload para: fondo 1 hero.png y titulo.png
+- Fonts: Great Vibes, Montserrat, Playfair Display, Space Grotesk
+
+HERO SECTION:
+- Estrella rosa superior derecha: sticker-star-huge-tr (top: -45%, right: -20%, z-index: 15)
+- Estrella rosa inferior izquierda: sticker-star-huge-bl (bottom: -42%, left: -25%)
+- Destellos negros: 
+  * sticker-sparkle-tl (top-left)
+  * sticker-sparkle-br-1 (bottom-right)
+  * sticker-sparkle-br-2 (bottom-right pequeño)
+- Titulo: max-width: 1600px
+
+ABOUT SECTION - GRID CV:
+- Grid: 1.5fr 1.5fr 2fr 1.5fr
+- Columna 1: HABILIDADES + SOFTWARE
+- Columna 2: PROYECTOS ACADÉMICOS (4 items)
+- Columna 3: EDUCACIÓN + EXPERIENCIA
+- Columna 4: FOTO + CONTACTO
+
+FOTO:
+- profile-no-frame-wrapper: width: 380px
+- transform: translateX(3rem) translateY(-2rem)
+- Gato: sticker-cat-new (top: 20px, right: 30px, width: 140px)
+
+CONTACTO (debajo de foto con margin-top: -6.6rem):
+- Idiomas: Español Nativo, Inglés B1
+- Diseñadora Gráfica
+- 3242218120
+- Barranquilla, Colombia
+- saravargasr2@gmail.com
+
+FOOTER ROW:
+- PERFIL PROFESIONAL (solo, debajo de la línea)
+
+================================================================================
+STYLES.CSS - VALORES CLAVE
+================================================================================
+
+VARIABLES:
+--bg-dark: #121212
+--bg-darker: #0a0a0a
+--fuchsia: #E63B7A
+--text-white: #ffffff
+--text-muted: #a0a0a0
+
+NAVBAR:
+- position: fixed, z-index: 100
+- transition: transform 0.4s ease
+- .navbar.hidden: translateY(-100%)
+
+HERO:
+- new-hero: height: 100vh, background: fondo 1 hero.png
+- hero-composition: max-width: 1400px
+
+ESTRELLAS ROSAS:
+- sticker-star-huge-tr: top: -45%, right: -20%, width: clamp(300px, 38vw, 550px), z-index: 15
+- sticker-star-huge-bl: bottom: -42%, left: -25%, width: clamp(300px, 40vw, 580px)
+
+DESTELLOS NEGROS:
+- sticker-sparkle-tl: rotate(-15deg), anim: pulseLeft
+- sticker-sparkle-br-1: rotate(15deg), anim: pulseRight
+- sticker-sparkle-br-2: rotate(12deg), anim: pulseRight2
+
+ANIMACIONES DESTELLOS:
+@keyframes pulseLeft { rotate(-15deg) scale(1) -> scale(1.08) -> scale(1) }
+@keyframes pulseRight { rotate(15deg) scale(1) -> scale(1.08) -> scale(1) }
+@keyframes pulseRight2 { rotate(12deg) scale(1) -> scale(1.08) -> scale(1) }
+
+ABOUT GRID:
+- grid-template-columns: 1.5fr 1.5fr 2fr 1.5fr
+- gap: 2rem
+- cv-col gap: 1.5rem
+
+FUENTES CV:
+- cv-section h3: 1rem
+- cv-section p: 0.8rem
+- cv-item h4: 0.85rem
+- cv-section.software-section p: 0.73rem
+- cv-contact-info p: 0.7rem
+- cv-contact-info strong: 1rem
+- cv-profile p: 0.8rem
+
+ESPACIADO CV:
+- cv-col-3 gap: 0.8rem
+- cv-col-3 .cv-item: margin-bottom: 0.5rem
+- cv-item: margin-bottom: 0.6rem
+- cv-contact-info gap: 0.3rem
+- cv-contact-info .contact-langs: margin-bottom: 0.3rem
+
+FOTO:
+- profile-no-frame-wrapper: width: 380px, transform: translateX(3rem) translateY(-2rem)
+- sticker-cat-new: width: 140px
+
+FOOTER:
+- cv-footer-row: grid-template-columns: 1fr, border-top: 1px solid rgba(255,255,255,0.1)
+
+================================================================================
+SCRIPT.JS - FUNCIONALIDADES
+================================================================================
+
+1. FORCE SCROLL TO TOP: window.scrollTo(0, 0) al cargar
+2. NAVBAR HIDE ON SCROLL: 
+   - Se oculta al bajar (scrollY > 100 y aumentando)
+   - Se muestra al subir
+3. SCROLL REVEAL ANIMATION:
+   - Elementos .reveal aparecen al hacer scroll
+4. STARRY BACKGROUND CANVAS:
+   - 150 estrellas
+   - Movimiento sutil
+   - Efecto de parpadeo (twinkling)
+
+================================================================================
+OPTIMIZACIONES:
+================================================================================
+
+- Preload de imágenes críticas (fondo hero, titulo)
+- loading="lazy" en imágenes no críticas
+- Preconnect a Google Fonts
+- Animaciones optimizadas con transform
+
+================================================================================
+FIN DEL BACKUP
+================================================================================

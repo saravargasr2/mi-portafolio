@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
-    <!-- Google Fonts: Space Grotesk for that clean, urban tech feel -->
+    <title>Sara Vargas | Portafolio 2026</title>
+    <!-- Google Fonts: Preconnect for faster loading -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="image" href="assets/fondo%201%20hero.png">
+    <link rel="preload" as="image" href="assets/titulo.png">
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Local CSS -->
     <link rel="stylesheet" href="styles.css">
@@ -20,7 +22,7 @@
 
     <!-- Main Navigation -->
     <nav class="navbar">
-        <div class="logo">MP.</div>
+        <div class="logo">SV.</div>
         <ul class="nav-links">
             <li><a href="#about">Sobre Mí</a></li>
             <li><a href="#work">Trabajos</a></li>
@@ -37,12 +39,12 @@
             <img src="assets/estrella rosa.png" class="sticker sticker-star-huge-bl spin-anim" alt="Big Star Bottom Left">
             
             <!-- Destellos Negros (Sparkles) -->
-            <img src="assets/destello negro.png" class="sticker sticker-sparkle-tl pulse-anim delay-1" alt="Sparkle Top Left">
-            <img src="assets/destello negro.png" class="sticker sticker-sparkle-br-1 pulse-anim delay-2" alt="Sparkle Bottom Right">
-            <img src="assets/destello negro.png" class="sticker sticker-sparkle-br-2 pulse-anim delay-3" alt="Small Sparkle Bottom Right">
+            <img src="assets/destello negro.png" class="sticker sticker-sparkle-tl delay-1" alt="Sparkle Top Left">
+            <img src="assets/destello negro.png" class="sticker sticker-sparkle-br-1 delay-2" alt="Sparkle Bottom Right">
+            <img src="assets/destello negro.png" class="sticker sticker-sparkle-br-2 delay-3" alt="Small Sparkle Bottom Right">
 
             <div class="hero-text-container" style="text-align: center; position: relative; z-index: 10; width: 100%;">
-                <img src="assets/titulo.png" alt="Portfolio Diseñadora Gráfica" class="rise-up-anim" style="width: 100%; max-width: 1400px; display: block; margin: 0 auto;">
+                <img src="assets/titulo.png" alt="Portfolio Diseñadora Gráfica" class="rise-up-anim" style="width: 100%; max-width: 1600px; display: block; margin: 0 auto;">
             </div>
         </div>
     </section>
@@ -135,11 +137,19 @@
                     </div>
                 </div>
 
-                <!-- Col 4 Photo (Simplified) -->
+                <!-- Col 4 Photo + Contact -->
                 <div class="cv-col cv-profile-no-frame reveal">
-                    <div class="profile-no-frame-wrapper float-anim">
-                        <img src="assets/gato.png" class="sticker-cat-new float-anim" alt="Gato">
-                        <img src="assets/foto sara.png" alt="Sarah Profile" class="photo-only">
+                    <div class="profile-no-frame-wrapper">
+                        <img src="assets/gato.png" class="sticker-cat-new" alt="Gato" loading="lazy">
+                        <img src="assets/foto sara.png" alt="Sarah Profile" class="photo-only" loading="lazy">
+                    </div>
+                    <div class="cv-contact-info text-right" style="margin-top: -6.6rem;">
+                        <div class="contact-langs">
+                            <p><strong>Idiomas</strong><br>Español: Nativo<br>Inglés: B1</p>
+                        </div>
+                        <div class="contact-details">
+                            <p><strong>Diseñadora Gráfica</strong><br>3242218120<br>Barranquilla, Colombia<br>saravargasr2@gmail.com</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -150,18 +160,10 @@
                     <h3>PERFIL PROFESIONAL</h3>
                     <p>Diseñadora gráfica con interés en ilustración, animación y modelado 3D, con experiencia en proyectos freelance y académicos. Caracterizada por un enfoque práctico, organizado y responsable en el desarrollo de piezas visuales, manejo sólido de herramientas digitales de diseño y disposición para aprender y adaptarse a distintos entornos creativos.</p>
                 </div>
-                <div class="cv-contact-info text-right">
-                    <div class="contact-langs">
-                        <p><strong>Idiomas</strong><br>Español: Nativo<br>Inglés: B1</p>
-                    </div>
-                    <div class="contact-details">
-                        <p><strong>Diseñadora Gráfica</strong><br>Barranquilla, Colombia<br>saravargasr2@gmail.com</p>
-                    </div>
-                </div>
             </div>
             
             <div class="software-icons-row text-right">
-                <img src="assets/iconos.png" alt="Software Icons" class="software-icons-img-footer">
+                <img src="assets/iconos.png" alt="Software Icons" class="software-icons-img-footer" loading="lazy">
             </div>
         </div>
     </section>
@@ -174,7 +176,7 @@
                 <!-- Project Card 1 -->
                 <div class="project-card">
                     <div class="project-image-box">
-                        <img src="assets/urban_branding_mockup_1775953782614.png" alt="Identidad de Marca" class="project-img">
+                        <img src="assets/urban_branding_mockup_1775953782614.png" alt="Identidad de Marca" class="project-img" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Identidad de Marca</h3>
@@ -184,7 +186,7 @@
                 <!-- Project Card 2 -->
                 <div class="project-card">
                     <div class="project-image-box">
-                        <img src="assets/futuristic_packaging_1775953802164.png" alt="Diseño de Empaque" class="project-img">
+                        <img src="assets/futuristic_packaging_1775953802164.png" alt="Diseño de Empaque" class="project-img" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Diseño de Empaque</h3>
@@ -194,7 +196,7 @@
                 <!-- Project Card 3 -->
                 <div class="project-card">
                     <div class="project-image-box">
-                        <img src="assets/urban_poster_campaign_1775953816567.png" alt="Campaña Visual" class="project-img">
+                        <img src="assets/urban_poster_campaign_1775953816567.png" alt="Campaña Visual" class="project-img" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Campaña Visual</h3>
@@ -204,7 +206,7 @@
                 <!-- Project Card 4 -->
                 <div class="project-card">
                     <div class="project-image-box">
-                        <img src="assets/darkmode_ui_design_1775953830870.png" alt="Diseño Web" class="project-img">
+                        <img src="assets/darkmode_ui_design_1775953830870.png" alt="Diseño Web" class="project-img" loading="lazy">
                     </div>
                     <div class="project-info">
                         <h3>Diseño Web</h3>
@@ -229,7 +231,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2026 Mi Portfolio. Todos los derechos reservados.</p>
+        <p>© 2026 Sara Vargas. Todos los derechos reservados.</p>
     </footer>
 
     <!-- Local JS -->

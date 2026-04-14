@@ -1,4 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // === FORCE SCROLL TO TOP ON LOAD ===
+    window.scrollTo(0, 0);
+
+    // === NAVBAR HIDE ON SCROLL ===
+    const navbar = document.querySelector('.navbar');
+    let lastScrollY = window.scrollY;
+
+    const handleNavbar = () => {
+        const currentScrollY = window.scrollY;
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            navbar.classList.add('hidden');
+        } else {
+            navbar.classList.remove('hidden');
+        }
+        lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener('scroll', handleNavbar);
+
     // === SCROLL REVEAL ANIMATION ===
     const reveals = document.querySelectorAll('.reveal');
 

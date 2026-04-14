@@ -71,6 +71,11 @@ p {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    transition: transform 0.4s ease;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%);
 }
 
 .logo {
@@ -154,8 +159,8 @@ p {
 .section-title {
     font-size: 3rem;
     margin-bottom: 3rem;
-    color: var(--text-white);
-    border-bottom: 2px solid var(--fuchsia);
+    color: #1a1a1a;
+    border-bottom: 2px solid #E63B7A;
     display: inline-block;
     padding-bottom: 0.5rem;
 }
@@ -242,17 +247,17 @@ p {
 }
 
 .sticker-star-huge-tr {
-    top: -30%;
-    right: -30%;
-    width: clamp(350px, 45vw, 650px);
-    z-index: 1; /* Detrás del texto */
+    top: -45%;
+    right: -20%;
+    width: clamp(300px, 38vw, 550px);
+    z-index: 15;
     transform-origin: center;
 }
 
 .sticker-star-huge-bl {
-    bottom: -30%;
-    left: -30%;
-    width: clamp(350px, 45vw, 650px);
+    bottom: -42%;
+    left: -25%;
+    width: clamp(300px, 40vw, 580px);
     z-index: 1;
     transform-origin: center;
 }
@@ -262,18 +267,42 @@ p {
     top: 5%;
     left: 5%;
     width: clamp(40px, 5vw, 80px);
+    animation: pulseLeft 4s ease-in-out infinite, fadeInSparkle 0.8s ease-out forwards;
+    transform: rotate(-15deg);
 }
 
 .sticker-sparkle-br-1 {
     bottom: 15%;
     right: 8%;
     width: clamp(50px, 6vw, 90px);
+    animation: pulseRight 4s ease-in-out infinite, fadeInSparkle 0.8s ease-out forwards;
+    transform: rotate(15deg);
 }
 
 .sticker-sparkle-br-2 {
     bottom: 5%;
     right: 5%;
     width: clamp(25px, 3.5vw, 50px);
+    animation: pulseRight2 4s ease-in-out infinite, fadeInSparkle 0.8s ease-out forwards;
+    transform: rotate(12deg);
+}
+
+@keyframes pulseLeft {
+    0% { transform: rotate(-15deg) scale(1); }
+    50% { transform: rotate(-15deg) scale(1.08); }
+    100% { transform: rotate(-15deg) scale(1); }
+}
+
+@keyframes pulseRight {
+    0% { transform: rotate(15deg) scale(1); }
+    50% { transform: rotate(15deg) scale(1.08); }
+    100% { transform: rotate(15deg) scale(1); }
+}
+
+@keyframes pulseRight2 {
+    0% { transform: rotate(12deg) scale(1); }
+    50% { transform: rotate(12deg) scale(1.08); }
+    100% { transform: rotate(12deg) scale(1); }
 }
 
 .sticker-avatar-left {
@@ -351,6 +380,11 @@ p {
     100% { opacity: 1; }
 }
 
+@keyframes fadeInSparkle {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
 @keyframes scaleIn {
     0% { opacity: 0; transform: scale(0.5); }
     100% { opacity: 1; transform: scale(1); }
@@ -395,54 +429,70 @@ p {
 .cv-col {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .cv-col-1 {
     justify-content: space-between;
 }
 
+.cv-section.software-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cv-section.software-section p {
+    font-size: 0.73rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+
 .cv-section h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-white);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     letter-spacing: 2px;
     border-bottom: 1px solid rgba(255,255,255,0.2);
-    padding-bottom: 0.5rem;
+    padding-bottom: 0.3rem;
 }
 
 .cv-section h4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #E63B7A;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.3rem;
     font-weight: 600;
 }
 
 .cv-section p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-    margin-bottom: 1rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
 }
 
 .cv-item {
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.6rem;
 }
 
 .cv-item p {
     margin-bottom: 0px;
 }
 
+.cv-item h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+}
+
 /* Compression for Education/Experience column to match height */
 .cv-col-3 {
-    gap: 1rem !important;
+    gap: 0.8rem !important;
 }
 
 .cv-col-3 .cv-item {
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.5rem;
 }
 
 .cv-col-3 .cv-section h3 {
-    margin-bottom: 0.6rem;
+    margin-bottom: 0.4rem;
 }
 
 /* Software Icons Grid */
@@ -510,8 +560,9 @@ p {
 /* Frameless Photo */
 .profile-no-frame-wrapper {
     position: relative;
-    width: 300px; /* Larger photo */
+    width: 380px; /* Reduced 5% */
     margin: 0 auto;
+    transform: translateX(3rem) translateY(-2rem);
     filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
 }
 
@@ -525,9 +576,9 @@ p {
 
 .sticker-cat-new {
     position: absolute;
-    top: -15px;
-    right: -15px;
-    width: 90px;
+    top: 20px;
+    right: 30px;
+    width: 140px;
     z-index: 10;
 }
 
@@ -557,37 +608,56 @@ p {
 /* Footer CV items */
 .cv-footer-row {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
+    grid-template-columns: 1fr;
+    gap: 0;
     align-items: end;
     margin-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.1);
     padding-top: 2rem;
 }
 
+.cv-profile-no-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.cv-profile-no-frame .cv-contact-info {
+    width: 100%;
+    max-width: 380px;
+    text-align: right;
+}
+
 .cv-profile h3 {
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: var(--text-white);
-    margin-bottom: 1rem;
+    margin-bottom: 0.6rem;
 }
 
 .cv-profile p {
-    font-size: 0.95rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
 }
 
 .cv-contact-info {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.3rem;
 }
 
 .cv-contact-info p {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     margin-bottom: 0;
+    line-height: 1.4;
+}
+
+.cv-contact-info .contact-langs {
+    margin-bottom: 0.3rem;
 }
 
 .cv-contact-info strong {
     color: #E63B7A;
+    font-size: 1rem;
 }
 
 .software-icons-row {
@@ -641,6 +711,76 @@ p {
 }
 
 /* Work Section */
+.work {
+    background-color: #f5f3f0;
+    position: relative;
+    color: #1a1a1a;
+}
+
+.work .section-title {
+    color: #1a1a1a;
+}
+
+.work p {
+    color: #555;
+}
+
+.work::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    pointer-events: none;
+    opacity: 0.25;
+    background:
+        /* Wrinkles - diagonal creases (more frequent) */
+        repeating-linear-gradient(
+            35deg,
+            transparent,
+            transparent 25px,
+            rgba(180, 170, 160, 0.4) 25px,
+            rgba(180, 170, 160, 0.4) 26px,
+            transparent 26px,
+            transparent 30px
+        ),
+        repeating-linear-gradient(
+            145deg,
+            transparent,
+            transparent 35px,
+            rgba(170, 160, 150, 0.3) 35px,
+            rgba(170, 160, 150, 0.3) 36px,
+            transparent 36px,
+            transparent 42px
+        ),
+        /* Horizontal wrinkles */
+        repeating-linear-gradient(
+            88deg,
+            transparent,
+            transparent 40px,
+            rgba(190, 180, 170, 0.25) 40px,
+            rgba(190, 180, 170, 0.25) 41px,
+            transparent 41px,
+            transparent 50px
+        ),
+        /* Vertical wrinkles */
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 50px,
+            rgba(185, 175, 165, 0.2) 50px,
+            rgba(185, 175, 165, 0.2) 51px,
+            transparent 51px,
+            transparent 60px
+        ),
+        /* Subtle paper grain */
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 1px,
+            rgba(200, 190, 180, 0.08) 1px,
+            rgba(200, 190, 180, 0.08) 3px
+        );
+}
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -648,26 +788,36 @@ p {
 }
 
 .project-card {
-    background-color: var(--bg-darker);
-    border: 1px solid #333;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    background-color: transparent;
+    border: none;
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
 .project-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--fuchsia);
-    box-shadow: 0 10px 30px rgba(255, 0, 255, 0.1);
+    transform: translateY(-5px);
+}
+
+.project-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #1a1a1a;
+}
+
+.project-info p {
+    font-size: 0.9rem;
+    color: var(--fuchsia);
 }
 
 .project-image-box {
     width: 100%;
     height: 250px;
-    background-color: #222;
+    background-color: #e8e6e3;
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    border-radius: 4px;
 }
 
 .project-img {
@@ -750,12 +900,16 @@ footer p {
     .about-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .nav-links {
         display: none; /* simple hidden nav for mobile without JS */
     }
-    
+
     .section-title {
         font-size: 2rem;
+    }
+
+    .work {
+        padding: 4rem 5%;
     }
 }
