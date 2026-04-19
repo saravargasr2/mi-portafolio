@@ -641,6 +641,14 @@ p {
 }
 
 /* Work Section */
+.work {
+    position: relative;
+    background-image: url('assets/recortee blanco.png');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: repeat-y;
+}
+
 .work-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
