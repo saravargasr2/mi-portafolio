@@ -713,6 +713,10 @@ p {
 /* Work Section */
 .work {
     background-color: #f5f3f0;
+    background-image: url('assets/recortee blanco.png');
+    background-size: 100% auto;
+    background-position: top center;
+    background-repeat: repeat-y;
     position: relative;
     color: #1a1a1a;
 }
@@ -726,59 +730,7 @@ p {
 }
 
 .work::before {
-    content: "";
-    position: absolute;
-    top: 0; left: 0; right: 0; bottom: 0;
-    pointer-events: none;
-    opacity: 0.25;
-    background:
-        /* Wrinkles - diagonal creases (more frequent) */
-        repeating-linear-gradient(
-            35deg,
-            transparent,
-            transparent 25px,
-            rgba(180, 170, 160, 0.4) 25px,
-            rgba(180, 170, 160, 0.4) 26px,
-            transparent 26px,
-            transparent 30px
-        ),
-        repeating-linear-gradient(
-            145deg,
-            transparent,
-            transparent 35px,
-            rgba(170, 160, 150, 0.3) 35px,
-            rgba(170, 160, 150, 0.3) 36px,
-            transparent 36px,
-            transparent 42px
-        ),
-        /* Horizontal wrinkles */
-        repeating-linear-gradient(
-            88deg,
-            transparent,
-            transparent 40px,
-            rgba(190, 180, 170, 0.25) 40px,
-            rgba(190, 180, 170, 0.25) 41px,
-            transparent 41px,
-            transparent 50px
-        ),
-        /* Vertical wrinkles */
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 50px,
-            rgba(185, 175, 165, 0.2) 50px,
-            rgba(185, 175, 165, 0.2) 51px,
-            transparent 51px,
-            transparent 60px
-        ),
-        /* Subtle paper grain */
-        repeating-linear-gradient(
-            0deg,
-            transparent,
-            transparent 1px,
-            rgba(200, 190, 180, 0.08) 1px,
-            rgba(200, 190, 180, 0.08) 3px
-        );
+    display: none;
 }
 
 .work-grid {
@@ -845,7 +797,7 @@ p {
 .project-info h3 {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    color: var(--text-white);
+    color: #1a1a1a;
 }
 
 .project-info p {
