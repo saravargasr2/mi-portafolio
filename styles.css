@@ -643,10 +643,52 @@ p {
 /* Work Section */
 .work {
     position: relative;
+    overflow: hidden;
+    background-color: #f5f3f0;
+    color: #1a1a1a;
+}
+
+.work.section-padding {
+    padding-top: 13rem;
+    padding-bottom: 13rem;
+}
+
+.work .container {
+    position: relative;
+    z-index: 2;
+}
+
+.work .section-title,
+.work .project-info h3 {
+    color: #1a1a1a;
+}
+
+.work p {
+    color: #555;
+}
+
+.work::before,
+.work::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    z-index: 0;
+    width: 100%;
+    height: 240px;
+    pointer-events: none;
     background-image: url('assets/recortee blanco.png');
+    background-repeat: no-repeat;
     background-size: 100% auto;
+}
+
+.work::before {
+    top: 0;
     background-position: top center;
-    background-repeat: repeat-y;
+}
+
+.work::after {
+    bottom: 0;
+    background-position: bottom center;
 }
 
 .work-grid {
@@ -765,5 +807,15 @@ footer p {
     
     .section-title {
         font-size: 2rem;
+    }
+
+    .work.section-padding {
+        padding-top: 7rem;
+        padding-bottom: 7rem;
+    }
+
+    .work::before,
+    .work::after {
+        height: 115px;
     }
 }
